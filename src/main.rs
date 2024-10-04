@@ -409,6 +409,9 @@ fn check_any_possible_move(board: &[[i32; 8]; 8], player: &str) -> bool {
             }
         }
     }
+    if !flag {
+        println!("{} player has no valid move",player);
+    }
     return flag
 }
 
