@@ -51,6 +51,7 @@ fn main() {
             //current player has no possible move
             if !check_any_possible_move(&board, &player){
                 //calculate and announce the result of the game, then break
+                print_the_board(&board);
                 println!("{}",calculate_the_result(&board));
                 break;
             }
@@ -60,7 +61,7 @@ fn main() {
 }
 
 //the function to print the board, converting numbers to alphabets
-fn print_the_board(board: &mut[[i32; 8]; 8]){
+fn print_the_board(board: &[[i32; 8]; 8]){
     println!("  abcdefgh");
     let mut row_count: u8 = 0;
     for row in board.iter() {
